@@ -59,8 +59,8 @@ server_name: itog.xyz
 #         'PASSWORD': 'changeme',
 #     }
 # }
-db_name: tentoken
-db_user: tentoken
+db_name: itogxyz
+db_user: itogxyz
 # db_password: tentoken
 
 # apt packages, you should not need to change this unless you have packages

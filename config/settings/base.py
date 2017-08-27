@@ -55,7 +55,7 @@ THIRD_PARTY_APPS = [
     'allauth.account',  # registration
     'allauth.socialaccount',  # registration
     'allauth.socialaccount.providers.facebook',
-    'allauth.socialaccount.providers.google',
+    # 'allauth.socialaccount.providers.google',
 ]
 
 # Apps specific for this project go here.
