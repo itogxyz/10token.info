@@ -1,15 +1,22 @@
 from django.contrib import admin
 from .models import *
 
+
+class InvestorInline(admin.StackedInline):
+    model = Investor
+
 class StartupAdmin(admin.ModelAdmin):
     list_display = ('name','user','goal','created_date')
     list_filter = ('created_date',)
     search_fields = ('name','description','wallet')
+    inlines = [InvestorInline]
+
 
 class InvestorAdmin(admin.ModelAdmin):
     list_display = ('user','created_date')
     # list_filter = ('reissuable',)
     search_fields = ('user',)
+
 
 class OrderAdmin(admin.ModelAdmin):
     list_display = ('investor','startup','amount')
