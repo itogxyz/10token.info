@@ -62,7 +62,7 @@ THIRD_PARTY_APPS = [
 LOCAL_APPS = [
     # custom users app
     'itogxyz.users.apps.UsersConfig',
-    'asset',
+    'startup',
     # 'itogxyz.tentoken.apps.TentokenConfig',
     'csvimport.app.CSVImportConf',
 

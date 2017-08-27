@@ -21,7 +21,7 @@
   </div> -->
 
 
-  <div class="row top_asset">
+  <div class="row top_startup">
     <div class="col-lg-12">
 
       <table class="table table-bordered table-condensed">
@@ -32,14 +32,14 @@
         </tr>
         {% for object in object_list %}
         <tr>
-          <td><a href={% url 'assets:detail' object.pk %}>{{ object.name }}</a></td>
+          <td><a href={% url 'startups:detail' object.pk %}>{{ object.name }}</a></td>
           <td>{{object.description}}</td>
           <td>{{object.amount}}</td>
         </tr>
         {% endfor %}
       </table>
 
-      <p><a class="btn btn-lg btn-success " href={% url 'assets:list' %} role="button">All startups</a></p>
+      <p><a class="btn btn-lg btn-success " href={% url 'startups:list' %} role="button">All startups</a></p>
 
 
     </div>

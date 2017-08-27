@@ -5,13 +5,13 @@ from django.contrib import admin
 from django.views.generic import TemplateView
 from django.views import defaults as default_views
 
-from asset.views import AssetSelected
+from startup.views import StartupSelected
 
 
 urlpatterns = [
-    # url(r'^$', AssetSearchList.as_view(), name='home'),
+    # url(r'^$', StartupSearchList.as_view(), name='home'),
 
-    url(r'^$', AssetSelected.as_view(template_name='pages/home.html'), name='home'),
+    url(r'^$', StartupSelected.as_view(template_name='pages/home.html'), name='home'),
     url(r'^about/$', TemplateView.as_view(template_name='pages/about.html'), name='about'),
 
 
@@ -25,7 +25,7 @@ urlpatterns = [
 
 
     #INCLIDE tentoken
-    url(r'^asset/', include('asset.urls', namespace='assets')),
+    url(r'^startup/', include('startup.urls', namespace='startups')),
 
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

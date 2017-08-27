@@ -1,7 +1,7 @@
-from .models import Asset
+from .models import Startup
 from django import forms
 
-class AssetSearchForm(forms.Form):
+class StartupSearchForm(forms.Form):
     search_text =  forms.CharField(
                     required = False,
                     label='Search',

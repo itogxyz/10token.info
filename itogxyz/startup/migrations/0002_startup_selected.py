@@ -8,12 +8,12 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('asset', '0001_initial'),
+        ('startup', '0001_initial'),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='asset',
+            model_name='startup',
             name='selected',
             field=models.BooleanField(default=False),
         ),

@@ -72,7 +72,7 @@ h1, h2, h3 {
 
  /* Everything but the jumbotron gets side spacing for mobile first views */
  .marketing,
- .top_asset,
+ .top_startup,
  .footer {
    padding-right: 1rem;
    padding-left: 1rem;
@@ -118,7 +118,7 @@ h1, h2, h3 {
  @media screen and (min-width: 48em) {
    /* Remove the padding we set earlier */
    .header,
-   .top_asset,
+   .top_startup,
    .marketing,
    .footer {
      padding-right: 0;

@@ -2,7 +2,7 @@ from django.db import models
 from django.utils import timezone
 
 
-class Asset(models.Model):
+class Startup(models.Model):
     name = models.CharField('Token name', max_length=100)
     amount = models.CharField('Amount', max_length=100)
     description = models.TextField('Description')
@@ -25,4 +25,4 @@ class Asset(models.Model):
         return self.name
 
     def get_absolute_url(self):
-        return reverse('assets:detail', kwargs={'token_id': self.token_id})
+        return reverse('startups:detail', kwargs={'token_id': self.token_id})
