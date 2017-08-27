@@ -33,6 +33,8 @@ class Startup(models.Model):
 
 
 class Investor(models.Model):
+    # startup = models.OneToManyField(Startup) #Привязка к Asset (выше) 1 to 1
+
     user = models.ForeignKey(settings.AUTH_USER_MODEL)
     wallet = models.CharField('Wallet', max_length=100)
     # startups = models.ManyToManyField(Startup)
