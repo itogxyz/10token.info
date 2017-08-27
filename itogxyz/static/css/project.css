@@ -11,9 +11,10 @@
 section.logo {
   width: 100%;
   text-align: center;
+  font-weight: bold;
   padding: 10px 0;
-  font-size: 96px;
-  font-size: 6rem; }
+  font-size: 48px;
+  font-size: 3rem; }
 
 h1, h2, h3 {
   text-align: center;
