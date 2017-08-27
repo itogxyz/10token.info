@@ -5,20 +5,23 @@
 
   <div class="jumbotron">
     <h1 class="display-3">ITO Генератор</h1>
-    <p class="lead">Вы можете легко найти нужную информацию по всем токенам в Blockchain Waves. Все максимально просто и нагладно.</p>
+    <p class="lead">Выйте на ICO/ITO? Легко!
+      <br />Генератор смарт-контрактов. KYC инвесторы.
+      <br />Платформа для привлечения инвестиций в рублях.
+    </p>
   </div>
 
-  <!-- <div class="row marketing">
+   <div class="row marketing">
     <div class="col-lg-6">
-      <h4>Аналитика</h4>
-      <p>(В разработке) Аналитика позволит посмотреть какие токены "двигаются" и предсказывать методами машинного обучения наиболее перспективные для покупки.</p>
+      <h4>Стартапам</h4>
+      <p>Вам не нужны блокчейн-прогараммисты. Мы создадим личную страничку и сгенерируем для вас токены и найдем инвесторов.</p>
     </div>
 
     <div class="col-lg-6">
-      <h4>Портфель</h4>
-      <p>(В разработке) Вы можеет отмечать и создавать портфели для инвестирования и делиться ими с друзьями.</p>
+      <h4>Инвесторам</h4>
+      <p>Выбирайте только лучшие стартапы и инвестируйте легко. В рублях! Все сделки проверяются надежным банком РФ. </p>
     </div>
-  </div> -->
+  </div>
 
 
   <div class="row top_startup">
@@ -26,20 +29,31 @@
 
       <table class="table table-bordered table-condensed">
         <tr>
+          <th></th>
           <th>Name</th>
           <th>Description</th>
-          <th>Amount</th>
+          <th>Goal</th>
+          <th>Launch date</th>
+          <th></th>
+
         </tr>
         {% for object in object_list %}
         <tr>
+          <td><a href={% url 'startups:detail' object.pk %}>
+            <img src="{{ object.logo.url }}" height="50">
+            </a>
+          </td>
           <td><a href={% url 'startups:detail' object.pk %}>{{ object.name }}</a></td>
           <td>{{object.description}}</td>
-          <td>{{object.amount}}</td>
+          <td>{{object.goal}}</td>
+          <td>{{object.launch_date}}</td>
+          <td><a class="btn btn-success " href={% url 'startups:detail' object.pk %} role="button">Invest</a></p></td>
+
         </tr>
         {% endfor %}
       </table>
 
-      <p><a class="btn btn-lg btn-success " href={% url 'startups:list' %} role="button">All startups</a></p>
+      <p><a class="btn btn-lg btn-info " href={% url 'startups:list' %} role="button">All startups</a></p>
 
 
     </div>
