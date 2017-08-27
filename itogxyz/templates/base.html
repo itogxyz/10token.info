@@ -1,7 +1,7 @@
 {% load staticfiles i18n compress%}<!DOCTYPE html>
 <html lang="en">
   <head>
-
+    <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" type="image/vnd.microsoft.icon" />
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>{% block title %}itogxyz{% endblock title %}</title>
@@ -32,7 +32,8 @@
     <div class="container">
 
       <section class="logo mx-auto">
-        <a href={% url 'home' %}><span>ITOg</a></span>
+        <a href={% url 'home' %}><span><img src="{% static 'images/protest.svg' %}" style="width: 143px;" onerror="this.onerror=null; this.src='image.png'"> <br />
+ITOg</a></span>
       </section>
 
       <div class="header clearfix" >
