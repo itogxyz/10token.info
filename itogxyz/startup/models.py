@@ -7,7 +7,7 @@ from django.conf import settings
 class Startup(models.Model):
     name = models.CharField('Startup name', max_length=100)
     description = models.TextField('Description')
-    logo = models.ImageField()
+    logo = models.ImageField(blank=True,null=True)
     goal = models.IntegerField('Goal')
     vip = models.BooleanField(default=False)
     user = models.ForeignKey(settings.AUTH_USER_MODEL)
@@ -37,7 +37,7 @@ class Investor(models.Model):
     wallet = models.CharField('Wallet', max_length=100)
     # startups = models.ManyToManyField(Startup)
 
-    passport = models.ImageField()
+    passport = models.ImageField(blank=False)
 
     created_date = models.DateTimeField(
             default=timezone.now)

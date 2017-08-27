@@ -39,9 +39,12 @@
         </tr>
         {% for object in object_list %}
         <tr>
-          <td><a href={% url 'startups:detail' object.pk %}>
-            <img src="{{ object.logo.url }}" height="50">
-            </a>
+          <td>
+            {% if object.logo %}
+              <a href={% url 'startups:detail' object.pk %}>
+                <img src="{{ object.logo.url }}" height="50">
+              </a>
+            {% endif %}
           </td>
           <td><a href={% url 'startups:detail' object.pk %}>{{ object.name }}</a></td>
           <td>{{object.description}}</td>

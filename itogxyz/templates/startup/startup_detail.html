@@ -9,26 +9,36 @@
             </div>
         {% endif %} -->
 
+        {% if object.logo %}
+          <center><img src="{{ object.logo.url }}" height="200"></center>
+        {% endif %}
+
         <h1>{{ startup.name }}</h1>
+
         <p>{{ startup.description|linebreaksbr }}</p>
-        <p>Startup id: <a href="https://wavesexplorer.com/tx/{{ startup.token_id }}">{{ startup.token_id }}</a></p>
-        <p>Issuer id: <a href="https://wavesexplorer.com/address/{{ startup.sender_id }}">{{ startup.sender_id }}</a></p>
-        <p>amount: {{ startup.amount }}</p>
-        <p>reissuable: {{ startup.reissuable }}</p>
-        <p>{{ startup.created_date }}</p>
+        <p>Goal: <b>{{ startup.goal }} руб.</b></p>
+        <p>User: {{ startup.user }}</p>
+        <p>Wallet ETH: <a href="https://ropsten.etherscan.io/address/{{ startup.wallet }}">{{ startup.wallet }}</a></p>
+        <br />
+        <p>Website: <a href="{{ startup.website }}">{{ startup.website }}</a></p>
+        <p>Created date: {{ startup.created_date }}</p>
+        <p>Launch date: {{ startup.launch_date }}</p>
+
+
+        <p><a class="btn btn-lg btn-info " href="" role="button">Invest</a></p>
 
         <br />
         <div id="disqus_thread"></div>
         <script>
 
           var disqus_config = function () {
-          this.page.url = 'https://itog.xyz/startup/token/{{ startup.id }}';
-          this.page.identifier = '{{ startup.token_id }}';
+          this.page.url = '//itog.xyz/startup/{{ startup.id }}';
+          this.page.identifier = '{{ startup.id }}';
           };
 
           (function() { // DON'T EDIT BELOW THIS LINE
           var d = document, s = d.createElement('script');
-          s.src = 'https://itogxyz.disqus.com/embed.js';
+          s.src = 'https://itog-xyz.disqus.com/embed.js';
           s.setAttribute('data-timestamp', +new Date());
           (d.head || d.body).appendChild(s);
           })();
