@@ -63,8 +63,6 @@ LOCAL_APPS = [
     # custom users app
     'itogxyz.users.apps.UsersConfig',
     'startup',
-    # 'itogxyz.tentoken.apps.TentokenConfig',
-    'csvimport.app.CSVImportConf',
 
     # Your stuff: custom apps go here
 

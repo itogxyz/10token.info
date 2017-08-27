@@ -32,11 +32,11 @@ class StartupSelected(ListView):
     template_name = 'startup/startup_list.html'
     paginate_by = 10
 
-    def get_queryset(self):
-        """
-        Список наших объектов будет состоять лишь из отмеченных модераторами токенов
-        """
-        return Startup.objects.filter(selected=True)
+    # def get_queryset(self):
+    #     """
+    #     Список наших объектов будет состоять лишь из отмеченных модераторами токенов
+    #     """
+    #     return Startup.objects.filter(selected=True)
 
 class StartupDetail(DetailView):
     model = Startup
