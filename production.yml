@@ -45,7 +45,7 @@ services:
   #   depends_on:
   #    - postgres
   #    - redis
-  #   command: celery -A 10token.taskapp worker -l INFO
+  #   command: celery -A itogxyz.taskapp worker -l INFO
   #
   # celerybeat:
   #   build:
@@ -55,4 +55,4 @@ services:
   #   depends_on:
   #     - postgres
   #     - redis
-  #   command: celery -A 10token.taskapp beat -l INFO
+  #   command: celery -A itogxyz.taskapp beat -l INFO

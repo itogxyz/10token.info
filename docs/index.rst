@@ -1,9 +1,9 @@
-.. 10token documentation master file, created by
+.. itogxyz documentation master file, created by
    sphinx-quickstart.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to 10token's documentation!
+Welcome to itogxyz's documentation!
 ====================================================================
 
 Contents:

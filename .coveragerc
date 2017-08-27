@@ -1,5 +1,5 @@
 [run]
-include = 10token/*
+include = itogxyz/*
 omit = *migrations*, *tests*
 plugins =
     django_coverage_plugin

@@ -1,5 +1,5 @@
 """
-Django settings for 10token project.
+Django settings for itogxyz project.
 
 For more information on this file, see
 https://docs.djangoproject.com/en/dev/topics/settings/
@@ -11,8 +11,8 @@ import environ
 import os
 import sys
 
-ROOT_DIR = environ.Path(__file__) - 3  # (10token/config/settings/base.py - 3 = 10token/)
-APPS_DIR = ROOT_DIR.path('10token')
+ROOT_DIR = environ.Path(__file__) - 3  # (itogxyz/config/settings/base.py - 3 = itogxyz/)
+APPS_DIR = ROOT_DIR.path('itogxyz')
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -61,9 +61,9 @@ THIRD_PARTY_APPS = [
 # Apps specific for this project go here.
 LOCAL_APPS = [
     # custom users app
-    '10token.users.apps.UsersConfig',
+    'itogxyz.users.apps.UsersConfig',
     'asset',
-    # '10token.tentoken.apps.TentokenConfig',
+    # 'itogxyz.tentoken.apps.TentokenConfig',
     'csvimport.app.CSVImportConf',
 
     # Your stuff: custom apps go here
@@ -88,7 +88,7 @@ MIDDLEWARE = [
 # MIGRATIONS CONFIGURATION
 # ------------------------------------------------------------------------------
 MIGRATION_MODULES = {
-    'sites': '10token.contrib.sites.migrations'
+    'sites': 'itogxyz.contrib.sites.migrations'
 }
 
 # DEBUG
@@ -111,7 +111,7 @@ EMAIL_BACKEND = env('DJANGO_EMAIL_BACKEND', default='django.core.mail.backends.s
 # ------------------------------------------------------------------------------
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#admins
 ADMINS = [
-    ("""Rustam Salavatov """, 'info@10token.info'),
+    ("""Rustam Salavatov """, 'info@itog.xyz'),
 ]
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#managers
@@ -149,7 +149,7 @@ DATABASES['default']['ATOMIC_REQUESTS'] = True
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, '10token.sqlite3'),
+#         'NAME': os.path.join(BASE_DIR, 'itogxyz.sqlite3'),
 #     }
 # }
 
@@ -294,8 +294,8 @@ ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_USERNAME_REQURIED=True
 ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
 ACCOUNT_ALLOW_REGISTRATION = env.bool('DJANGO_ACCOUNT_ALLOW_REGISTRATION', True)
-ACCOUNT_ADAPTER = '10token.users.adapters.AccountAdapter'
-SOCIALACCOUNT_ADAPTER = '10token.users.adapters.SocialAccountAdapter'
+ACCOUNT_ADAPTER = 'itogxyz.users.adapters.AccountAdapter'
+SOCIALACCOUNT_ADAPTER = 'itogxyz.users.adapters.SocialAccountAdapter'
 
 # Custom user app defaults
 # Select the correct user model
@@ -307,7 +307,7 @@ LOGIN_URL = 'account_login'
 AUTOSLUG_SLUGIFY_FUNCTION = 'slugify.slugify'
 
 # ########## CELERY
-# INSTALLED_APPS += ['10token.taskapp.celery.CeleryConfig']
+# INSTALLED_APPS += ['itogxyz.taskapp.celery.CeleryConfig']
 # CELERY_BROKER_URL = env('CELERY_BROKER_URL', default='django://')
 # if CELERY_BROKER_URL == 'django://':
 #     CELERY_RESULT_BACKEND = 'redis://'

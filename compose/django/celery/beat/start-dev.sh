@@ -5,4 +5,4 @@ set -o nounset
 set -o xtrace
 
 rm -f './celerybeat.pid'
-celery -A 10token.taskapp beat -l INFO
+celery -A itogxyz.taskapp beat -l INFO

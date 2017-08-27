@@ -1,5 +1,5 @@
 """
-WSGI config for 10token project.
+WSGI config for itogxyz project.
 
 This module contains the WSGI application used by Django's development server
 and any production WSGI deployments. It should expose a module-level variable
@@ -19,9 +19,9 @@ import sys
 from django.core.wsgi import get_wsgi_application
 
 # This allows easy placement of apps within the interior
-# 10token directory.
+# itogxyz directory.
 app_path = os.path.dirname(os.path.abspath(__file__)).replace('/config', '')
-sys.path.append(os.path.join(app_path, '10token'))
+sys.path.append(os.path.join(app_path, 'itogxyz'))
 
 
 

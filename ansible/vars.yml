@@ -1,6 +1,6 @@
 ---
 # a unix path-friendly name (IE, no spaces or special characters)
-project_name: 10token
+project_name: itogxyz
 
 # the base path to install to. You should not need to change this.
 install_root: /srv
@@ -29,7 +29,7 @@ settings: "config.settings.production"
 
 # the git repository URL for the project
 # project_repo: git@github.com:fortunto2/life2film_backend.git
-project_repo: https://github.com/10token/10token.info
+project_repo: https://github.com/itogxyz/itog.xyz
 
 # a private key that has access to the repository URL
 ssh_private_key: ~/.ssh/id_rsa
@@ -42,7 +42,7 @@ ssh_private_key: ~/.ssh/id_rsa
 static_root: "{{ install_root }}/{{ project_name }}/staticfiles"
 
 # the dns name or names (space separated) for your server
-server_name: 10token.info
+server_name: itog.xyz
 
 # database setup. Note that because this playbook doesn't touch the default
 # postgres pg_hba.conf file, we use local password-based authentication for

@@ -1,5 +1,5 @@
 www.{%DOMAIN_NAME%} {
-    redir https://10token.info
+    redir https://itog.xyz
 }
 
 {%DOMAIN_NAME%} {

@@ -22,8 +22,8 @@ if __name__ == '__main__':
         raise
 
     # This allows easy placement of apps within the interior
-    # 10token directory.
+    # itogxyz directory.
     current_path = os.path.dirname(os.path.abspath(__file__))
-    sys.path.append(os.path.join(current_path, '10token'))
+    sys.path.append(os.path.join(current_path, 'itogxyz'))
 
     execute_from_command_line(sys.argv)
