@@ -67,6 +67,8 @@ staticfiles/
 
 .cache/
 
+
 venv/
 
-itog.xyz/config/itogxyz.sqlite3
+itog.xyz/config/itog.sqlite3
+itog.sqlite3
