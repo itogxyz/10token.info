@@ -2,6 +2,7 @@ from django.db import models
 from django.utils import timezone
 # from django.contrib.auth.models import User
 from django.conf import settings
+from django.core.urlresolvers import reverse
 
 
 class Startup(models.Model):
@@ -30,7 +31,7 @@ class Startup(models.Model):
 
     def get_absolute_url(self):
         return reverse('startups:detail', kwargs={'pk': self.pk})
-        
+
 
 class Investor(models.Model):
     # startup = models.OneToManyField(Startup) #Привязка к Asset (выше) 1 to 1
