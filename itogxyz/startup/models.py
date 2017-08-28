@@ -29,8 +29,8 @@ class Startup(models.Model):
         return self.name
 
     def get_absolute_url(self):
-        return reverse('startups:detail', kwargs={'token_id': self.token_id})
-
+        return reverse('startups:detail', kwargs={'pk': self.pk})
+        
 
 class Investor(models.Model):
     # startup = models.OneToManyField(Startup) #Привязка к Asset (выше) 1 to 1
