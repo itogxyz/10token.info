@@ -25,7 +25,7 @@
         <p>Launch date: {{ startup.launch_date }}</p>
 
 
-        <p><a class="btn btn-lg btn-info " href="" role="button">Invest</a></p>
+        <p><a class="btn btn-lg btn-info " href={% url 'startups:startup_add' %} role="button">Invest</a></p>
 
         <br />
         <div id="disqus_thread"></div>

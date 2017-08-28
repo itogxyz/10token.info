@@ -5,7 +5,7 @@ class StartupSearchForm(forms.Form):
     search_text =  forms.CharField(
                     required = False,
                     label='Search',
-                    widget=forms.TextInput(attrs={'placeholder': 'Token name ... '})
+                    widget=forms.TextInput(attrs={'placeholder': 'Startup name ... '})
                   )
 
     # token_id_exact = forms.IntegerField(
